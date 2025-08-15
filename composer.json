@@ -1,0 +1,26 @@
+{
+    "name": "streeboga/genesis",
+    "description": "PHP SDK for Genesis Platform",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Streeboga",
+            "email": "admin@streeboga.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Streeboga\\Genesis\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
