@@ -89,15 +89,76 @@ SDK выбрасывает специфичные исключения в `Stree
 
 ## Дальнейшие шаги (рекомендации)
 
-- Добавить примеры в `examples/` (quickstart для каждого клиента).
-- Настроить GitHub Actions для автоматических тестов и lint.
+- Добавить примеры в `examples/` (quickstart для каждого клиента). Уже есть `packages/streeboga/genesis/examples/session_example.php` и `examples/webhook.php` — их можно использовать как исходники.
+- Настроить GitHub Actions для автоматических тестов и lint (рекомендуется запускать Pest + Pint).
 - Опубликовать пакет на Packagist и документировать версионирование.
+
+### Новое в SDK (с недавними изменениями)
+
+- `EmbedClient` — поддержка виджетных endpoint'ов: `getInfo`, `getConfig`, `getStyle`, `getScript`, `health`, `authLogin`, `usersProfile`, `sessionsList`, `revokeSession`.
+- `FeaturesClient::getPricing($project, $user)` — получение прайсинга фич пользователя.
+- `BillingClient::listPlans($project)` и `BillingClient::getSubscriptionStatus($project, $user)` — управленческие billing endpoints.
+- `AuthClient` расширен: `forgotPassword`, `resetPassword`, `resendVerification`, `verifyEmail`, `twoFaChallenge`, `twoFaVerify`.
+- `GenesisClient::asUser($accessToken)` — лёгкое клонирование клиента для выполнения запросов от имени пользователя (добавляет `Authorization: Bearer ...`).
+- `GenesisClient::getRaw($uri)` — получить raw тело ответа (CSS/JS assets в Embed).
+
+### Сессии и persistence
+
+SDK предоставляет `UserSessionManager` для управления пользовательскими сессиями с автorefresh токена:
+
+- `Streeboga\Genesis\Session\UserSessionManager` — хранит `access_token`, `refresh_token`, `expires_at`, умеет автоматически вызывать `AuthClient::refresh()` при необходимости и возвращать `GenesisClient::asUser()`.
+- Persistence: `TokenStoreInterface` и реализации:
+  - `FileTokenStore` — простое файловое хранилище (JSON файлов).
+  - `RedisTokenStore` — реализация поверх Redis (поддерживает Predis / ext-redis-like интерфейс).
+
+Пример использования (см. `packages/streeboga/genesis/examples/session_example.php`):
+
+```php
+use Streeboga\Genesis\Config;
+use Streeboga\Genesis\GenesisClient;
+use Streeboga\Genesis\Session\UserSessionManager;
+use Streeboga\Genesis\Session\Storage\FileTokenStore;
+
+$config = Config::fromArray(['api_key' => 'SERVICE_KEY', 'base_url' => 'https://api.genesis.com/v1/']);
+$client = GenesisClient::fromConfig($config);
+
+// login
+$tokens = $client->auth->login(['email' => 'user@example.com', 'password' => 'secret']);
+
+$manager = new UserSessionManager($client);
+$manager->setAccessTokenForTesting($tokens['access_token'] ?? 'demo', $tokens['refresh_token'] ?? 'demo', $tokens['expires_in'] ?? 3600);
+
+$store = new FileTokenStore(sys_get_temp_dir() . '/genesis_sessions');
+$manager->setStore($store);
+$manager->saveSession('user_1_session');
+
+$userClient = $manager->getClient(); // GenesisClient configured with Bearer token
+$profile = $userClient->get('projects/1/users/1/profile');
+```
+
+### Рекомендации по безопасности
+
+- Для server-to-server операций используйте сервисный `X-API-Key` (по умолчанию в SDK). Для действий от имени пользователя — используйте `asUser()` или `UserSessionManager` с user access token.
 
 ---
 
 Если хотите, могу одновременно:
-- Создать `examples/` с рабочими скриптами
-- Добавить `README` на русском и английском
-- Настроить CI (GitHub Actions) для запуска тестов
+- Создать дополнительные примеры в `packages/streeboga/genesis/examples/` для: Embed quickstart, Billing example, Redis store example.
+- Добавить английскую версию README и примеры запуска CI.
 
-Что делаем следующим шагом? 
+Что делаем следующим шагом?
+
+## Webhooks
+
+SDK предоставляет утилиты для валидации и обработки webhook notify от платёжных провайдеров и других сервисов.
+
+- `Streeboga\Genesis\Webhook\Handler` — низкоуровневый обработчик: проверка подписи (HMAC-SHA256, base64), парсинг JSON и вызов callback.
+- `Streeboga\Genesis\Webhook\Client` — удобный обёртка для приёма заголовков (массив), извлечения подписи и передачи в Handler.
+
+Пример (см. `examples/webhook.php`):
+
+```php
+require __DIR__ . '/examples/webhook.php';
+```
+
+Он показывает базовый обработчик notify: проверка подписи, логирование и ответ 200. 

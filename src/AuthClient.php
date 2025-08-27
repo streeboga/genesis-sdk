@@ -27,4 +27,34 @@ class AuthClient
     {
         return $this->client->post('auth/logout', []);
     }
+
+    public function forgotPassword(array $data): array
+    {
+        return $this->client->post('auth/password/forgot', $data);
+    }
+
+    public function resetPassword(array $data): array
+    {
+        return $this->client->post('auth/password/reset', $data);
+    }
+
+    public function resendVerification(array $data): array
+    {
+        return $this->client->post('auth/resend-verification', $data);
+    }
+
+    public function verifyEmail(array $data): array
+    {
+        return $this->client->post('auth/email/verify', $data);
+    }
+
+    public function twoFaChallenge(array $data): array
+    {
+        return $this->client->post('auth/2fa/challenge', $data);
+    }
+
+    public function twoFaVerify(array $data): array
+    {
+        return $this->client->post('auth/2fa/verify', $data);
+    }
 }

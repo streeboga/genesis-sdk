@@ -30,4 +30,17 @@ class FeaturesClient
     {
         return $this->client->get("projects/{$project}/users/{$user}/features/stats");
     }
+
+    public function getPricing(int|string $project, int|string $user): array
+    {
+        return $this->client->get("projects/{$project}/users/{$user}/features/pricing");
+    }
+
+    public function consumeWithBalance(int|string $project, int|string $user, string $feature, int $amount = 1): array
+    {
+        return $this->client->post("projects/{$project}/users/{$user}/features/consume-with-balance", [
+            'feature' => $feature,
+            'amount' => $amount,
+        ]);
+    }
 }

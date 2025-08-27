@@ -19,8 +19,23 @@
         "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {
-        "pestphp/pest": "^2.0"
+        "pestphp/pest": "^2.0",
+        "phpdocumentor/phpdocumentor": "^3.4",
+        "laravel/pint": "^1.15",
+        "phpstan/phpstan": "^1.11"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest --colors=always",
+        "test:coverage": "./vendor/bin/pest --coverage --colors=always",
+        "docs": "./vendor/bin/phpdoc -d src -t docs/api",
+        "lint": "./vendor/bin/pint --dirty",
+        "stan": "./vendor/bin/phpstan analyse -c phpstan.neon"
+    }
 }

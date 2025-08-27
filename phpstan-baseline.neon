@@ -1,0 +1,461 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:forgotPassword\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:forgotPassword\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:login\\(\\) has parameter \\$credentials with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:login\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:logout\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:refresh\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:register\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:register\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:resendVerification\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:resendVerification\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:resetPassword\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:resetPassword\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:twoFaChallenge\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:twoFaChallenge\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:twoFaVerify\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:twoFaVerify\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:verifyEmail\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\AuthClient\\:\\:verifyEmail\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AuthClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\BillingClient\\:\\:calculateOveragePrice\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/BillingClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\BillingClient\\:\\:chargeProject\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/BillingClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\BillingClient\\:\\:chargeProject\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/BillingClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\BillingClient\\:\\:consumeOverage\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/BillingClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\BillingClient\\:\\:createSubscription\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/BillingClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\BillingClient\\:\\:createSubscription\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/BillingClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\BillingClient\\:\\:getOverage\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/BillingClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\BillingClient\\:\\:getPlanFeatures\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/BillingClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\BillingClient\\:\\:getPlanMetadata\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/BillingClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\BillingClient\\:\\:getSubscriptionStatus\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/BillingClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\BillingClient\\:\\:initiatePayment\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/BillingClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\BillingClient\\:\\:initiatePayment\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/BillingClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\BillingClient\\:\\:listPlans\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/BillingClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Config\\:\\:fromArray\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Config.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\DemoClient\\:\\:extendDemo\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/DemoClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\DemoClient\\:\\:getStatus\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/DemoClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\DemoClient\\:\\:giveDemo\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/DemoClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\DemoClient\\:\\:revokeDemo\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/DemoClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\EmbedClient\\:\\:authLogin\\(\\) has parameter \\$credentials with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/EmbedClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\EmbedClient\\:\\:authLogin\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/EmbedClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\EmbedClient\\:\\:getConfig\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/EmbedClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\EmbedClient\\:\\:getInfo\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/EmbedClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\EmbedClient\\:\\:health\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/EmbedClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\EmbedClient\\:\\:revokeSession\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/EmbedClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\EmbedClient\\:\\:sessionsList\\(\\) has parameter \\$params with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/EmbedClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\EmbedClient\\:\\:sessionsList\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/EmbedClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\EmbedClient\\:\\:usersProfile\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/EmbedClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Exceptions\\\\ValidationException\\:\\:__construct\\(\\) has parameter \\$errors with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Exceptions/ValidationException.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\FeaturesClient\\:\\:checkFeature\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/FeaturesClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\FeaturesClient\\:\\:consumeFeature\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/FeaturesClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\FeaturesClient\\:\\:consumeWithBalance\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/FeaturesClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\FeaturesClient\\:\\:getFeatures\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/FeaturesClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\FeaturesClient\\:\\:getPricing\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/FeaturesClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\FeaturesClient\\:\\:getStats\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/FeaturesClient.php
+
+		-
+			message: "#^Left side of && is always true\\.$#"
+			count: 4
+			path: src/GenesisClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\GenesisClient\\:\\:delete\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/GenesisClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\GenesisClient\\:\\:delete\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/GenesisClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\GenesisClient\\:\\:get\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/GenesisClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\GenesisClient\\:\\:getRaw\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/GenesisClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\GenesisClient\\:\\:post\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/GenesisClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\GenesisClient\\:\\:post\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/GenesisClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\GenesisClient\\:\\:put\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/GenesisClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\GenesisClient\\:\\:put\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/GenesisClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\GenesisClient\\:\\:request\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/GenesisClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\GenesisClient\\:\\:request\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/GenesisClient.php
+
+		-
+			message: "#^Ternary operator condition is always true\\.$#"
+			count: 1
+			path: src/GenesisClient.php
+
+		-
+			message: "#^Variable \\$response might not be defined\\.$#"
+			count: 3
+			path: src/GenesisClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Session\\\\Storage\\\\FileTokenStore\\:\\:listSessionIds\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Session/Storage/FileTokenStore.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Session\\\\Storage\\\\FileTokenStore\\:\\:load\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Session/Storage/FileTokenStore.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Session\\\\Storage\\\\FileTokenStore\\:\\:save\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Session/Storage/FileTokenStore.php
+
+		-
+			message: "#^If condition is always false\\.$#"
+			count: 1
+			path: src/Session/Storage/RedisTokenStore.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Session\\\\Storage\\\\RedisTokenStore\\:\\:__construct\\(\\) has parameter \\$client with no type specified\\.$#"
+			count: 1
+			path: src/Session/Storage/RedisTokenStore.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Session\\\\Storage\\\\RedisTokenStore\\:\\:listSessionIds\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Session/Storage/RedisTokenStore.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Session\\\\Storage\\\\RedisTokenStore\\:\\:load\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Session/Storage/RedisTokenStore.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Session\\\\Storage\\\\RedisTokenStore\\:\\:save\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Session/Storage/RedisTokenStore.php
+
+		-
+			message: "#^Property Streeboga\\\\Genesis\\\\Session\\\\Storage\\\\RedisTokenStore\\:\\:\\$client has no type specified\\.$#"
+			count: 1
+			path: src/Session/Storage/RedisTokenStore.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Session\\\\Storage\\\\TokenStoreInterface\\:\\:listSessionIds\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Session/Storage/TokenStoreInterface.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Session\\\\Storage\\\\TokenStoreInterface\\:\\:load\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Session/Storage/TokenStoreInterface.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Session\\\\Storage\\\\TokenStoreInterface\\:\\:save\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Session/Storage/TokenStoreInterface.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Session\\\\UserSessionManager\\:\\:fromLogin\\(\\) has parameter \\$credentials with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Session/UserSessionManager.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Session\\\\UserSessionManager\\:\\:listSessions\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Session/UserSessionManager.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Session\\\\UserSessionManager\\:\\:setTokensFromResponse\\(\\) has parameter \\$res with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Session/UserSessionManager.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\UsersClient\\:\\:deleteAccount\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/UsersClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\UsersClient\\:\\:getProfile\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/UsersClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\UsersClient\\:\\:listSessions\\(\\) has parameter \\$params with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/UsersClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\UsersClient\\:\\:listSessions\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/UsersClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\UsersClient\\:\\:revokeSession\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/UsersClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\UsersClient\\:\\:updateProfile\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/UsersClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\UsersClient\\:\\:updateProfile\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/UsersClient.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Utils\\\\BillingUtils\\:\\:summarizePlan\\(\\) has parameter \\$metadata with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Utils/BillingUtils.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Utils\\\\UsersUtils\\:\\:mergePreferences\\(\\) has parameter \\$existing with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Utils/UsersUtils.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Utils\\\\UsersUtils\\:\\:mergePreferences\\(\\) has parameter \\$incoming with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Utils/UsersUtils.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Utils\\\\UsersUtils\\:\\:mergePreferences\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Utils/UsersUtils.php
+
+		-
+			message: "#^Method Streeboga\\\\Genesis\\\\Webhook\\\\Client\\:\\:handleRequest\\(\\) has parameter \\$headers with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Webhook/Client.php

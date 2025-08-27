@@ -28,6 +28,21 @@ class BillingClient
         return $this->client->get("projects/{$project}/plans/{$planUuid}/metadata");
     }
 
+    public function listPlans(int|string $project): array
+    {
+        return $this->client->get("projects/{$project}/subscriptions/plans");
+    }
+
+    public function getSubscriptionStatus(int|string $project, int|string $user): array
+    {
+        return $this->client->get("projects/{$project}/users/{$user}/subscription/status");
+    }
+
+    public function chargeProject(int|string $project, array $data): array
+    {
+        return $this->client->post("projects/{$project}/billing/charge", $data);
+    }
+
     public function getOverage(int|string $project, int|string $user): array
     {
         return $this->client->get("projects/{$project}/users/{$user}/overage");
