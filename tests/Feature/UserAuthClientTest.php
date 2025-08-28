@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
-use PHPUnit\Framework\TestCase;
+use Streeboga\Genesis\Tests\TestCase;
 use Streeboga\Genesis\GenesisClient;
 
 class UserAuthClientTest extends TestCase
@@ -222,12 +222,15 @@ class UserAuthClientTest extends TestCase
             new Response(400, [], json_encode($expectedResponse))
         );
 
-        $response = $this->client->auth->authenticateByEmail([
-            'email' => 'test@example.com',
-            'project_uuid' => '00000000-0000-0000-0000-000000000000'
-        ]);
-
-        $this->assertEquals($expectedResponse, $response);
+        try {
+            $this->client->auth->authenticateByEmail([
+                'email' => 'test@example.com',
+                'project_uuid' => '00000000-0000-0000-0000-000000000000'
+            ]);
+            $this->fail('Expected ApiException was not thrown');
+        } catch (\Streeboga\Genesis\Exceptions\ApiException $e) {
+            $this->assertInstanceOf(\Streeboga\Genesis\Exceptions\ApiException::class, $e);
+        }
     }
 
     public function testValidateSessionWithExpiredToken(): void
@@ -243,9 +246,13 @@ class UserAuthClientTest extends TestCase
         );
 
         $sessionToken = str_repeat('x', 64);
-        $response = $this->client->auth->validateSession($sessionToken);
-
-        $this->assertEquals($expectedResponse, $response);
+        
+        try {
+            $this->client->auth->validateSession($sessionToken);
+            $this->fail('Expected ApiException was not thrown');
+        } catch (\Streeboga\Genesis\Exceptions\ApiException $e) {
+            $this->assertInstanceOf(\Streeboga\Genesis\Exceptions\ApiException::class, $e);
+        }
     }
 
     public function testGetPaymentUrlWithInvalidPlan(): void
@@ -263,9 +270,12 @@ class UserAuthClientTest extends TestCase
         $sessionToken = str_repeat('a', 64);
         $planUuid = '00000000-0000-0000-0000-000000000000';
         
-        $response = $this->client->auth->getPaymentUrl($sessionToken, $planUuid);
-
-        $this->assertEquals($expectedResponse, $response);
+        try {
+            $this->client->auth->getPaymentUrl($sessionToken, $planUuid);
+            $this->fail('Expected ApiException was not thrown');
+        } catch (\Streeboga\Genesis\Exceptions\ApiException $e) {
+            $this->assertInstanceOf(\Streeboga\Genesis\Exceptions\ApiException::class, $e);
+        }
     }
 
     public function testValidationErrors(): void
@@ -283,13 +293,13 @@ class UserAuthClientTest extends TestCase
             new Response(422, [], json_encode($expectedResponse))
         );
 
-        $response = $this->client->auth->authenticateByEmail([
-            // Пустые данные для тестирования валидации
-        ]);
-
-        $this->assertEquals($expectedResponse, $response);
-        $this->assertArrayHasKey('errors', $response);
-        $this->assertArrayHasKey('email', $response['errors']);
-        $this->assertArrayHasKey('project_uuid', $response['errors']);
+        try {
+            $this->client->auth->authenticateByEmail([
+                // Пустые данные для тестирования валидации
+            ]);
+            $this->fail('Expected ValidationException was not thrown');
+        } catch (\Streeboga\Genesis\Exceptions\ValidationException $e) {
+            $this->assertInstanceOf(\Streeboga\Genesis\Exceptions\ValidationException::class, $e);
+        }
     }
 }

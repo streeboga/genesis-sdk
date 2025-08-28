@@ -102,6 +102,7 @@ class ComposerStaticInitc20ec99ca28ba7042bdd661cc28aedfd
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\Clock\\' => 24,
             'Symfony\\Component\\Cache\\' => 24,
+            'Streeboga\\Genesis\\Tests\\' => 24,
             'Streeboga\\Genesis\\' => 18,
         ),
         'P' => 
@@ -176,8 +177,8 @@ class ComposerStaticInitc20ec99ca28ba7042bdd661cc28aedfd
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'phpDocumentor\\JsonPath\\' => 
         array (
@@ -185,10 +186,10 @@ class ComposerStaticInitc20ec99ca28ba7042bdd661cc28aedfd
         ),
         'phpDocumentor\\Guides\\' => 
         array (
-            0 => __DIR__ . '/..' . '/phpdocumentor/guides-restructured-text/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/guides-markdown/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/guides-graphs/src',
-            3 => __DIR__ . '/..' . '/phpdocumentor/guides/src',
+            0 => __DIR__ . '/..' . '/phpdocumentor/guides/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/guides-graphs/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/guides-markdown/src',
+            3 => __DIR__ . '/..' . '/phpdocumentor/guides-restructured-text/src',
         ),
         'phpDocumentor\\GraphViz\\PHPStan\\' => 
         array (
@@ -204,8 +205,8 @@ class ComposerStaticInitc20ec99ca28ba7042bdd661cc28aedfd
         ),
         'phpDocumentor\\' => 
         array (
-            0 => __DIR__ . '/..' . '/phpdocumentor/reflection/src/phpDocumentor',
-            1 => __DIR__ . '/..' . '/phpdocumentor/phpdocumentor/src/phpDocumentor',
+            0 => __DIR__ . '/..' . '/phpdocumentor/phpdocumentor/src/phpDocumentor',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection/src/phpDocumentor',
         ),
         'Whoops\\' => 
         array (
@@ -343,6 +344,10 @@ class ComposerStaticInitc20ec99ca28ba7042bdd661cc28aedfd
         array (
             0 => __DIR__ . '/..' . '/symfony/cache',
         ),
+        'Streeboga\\Genesis\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
+        ),
         'Streeboga\\Genesis\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -353,8 +358,8 @@ class ComposerStaticInitc20ec99ca28ba7042bdd661cc28aedfd
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -426,8 +431,8 @@ class ComposerStaticInitc20ec99ca28ba7042bdd661cc28aedfd
         ),
         'League\\Uri\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/uri-interfaces',
-            1 => __DIR__ . '/..' . '/league/uri',
+            0 => __DIR__ . '/..' . '/league/uri',
+            1 => __DIR__ . '/..' . '/league/uri-interfaces',
         ),
         'League\\Tactician\\' => 
         array (
