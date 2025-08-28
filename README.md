@@ -35,12 +35,21 @@ $overage = $client->billing->calculateOveragePrice($projectId, $planUuid, 'api_c
 
 // Auth
 $tokens = $client->auth->login(['email' => 'a@b.com', 'password' => 'secret']);
+
+// User Auth API - авторизация по email с токеном сессии
+$session = $client->auth->authenticateByEmail([
+    'email' => 'user@example.com',
+    'project_uuid' => '550e8400-e29b-41d4-a716-446655440000',
+    'plan_uuid' => '987f6543-e21c-34d5-b678-987654321000'
+]);
+
+$paymentUrl = $client->auth->getPaymentUrl($session['session_token'], $planUuid);
 ```
 
 ## Доступные клиенты
 
 - `GenesisClient` — базовый HTTP-клиент (GET/POST/PUT/DELETE), обработка ошибок (404/422/5xx), свойство `auth`, `features`, `demo`, `billing`.
-- `AuthClient` — методы: `login`, `register`, `refresh`, `logout`.
+- `AuthClient` — методы: `login`, `register`, `refresh`, `logout`, `authenticateByEmail`, `validateSession`, `getPaymentUrl`, `extendSession`, `destroySession`, `getSessionInfo`.
 - `FeaturesClient` — методы: `getFeatures`, `checkFeature`, `consumeFeature`, `getStats`.
 - `DemoClient` — методы: `getStatus`, `giveDemo`, `extendDemo`, `revokeDemo`.
 - `BillingClient` — методы: `createSubscription`, `initiatePayment`, `getPlanFeatures`, `getPlanMetadata`, `getOverage`, `consumeOverage`, `calculateOveragePrice`.
