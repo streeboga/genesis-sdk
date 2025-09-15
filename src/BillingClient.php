@@ -13,9 +13,19 @@ class BillingClient
         return $this->client->post("projects/{$project}/subscriptions", $data);
     }
 
-    public function initiatePayment(array $data): array
+    public function initiatePayment(int|string|array $project, ?array $data = null): array
     {
-        return $this->client->post('payments', $data);
+        // Backward compatibility: если передан только массив с project_uuid
+        if (is_array($project) && $data === null) {
+            $projectUuid = $project['project_uuid'] ?? null;
+            if (!$projectUuid) {
+                throw new \InvalidArgumentException('project_uuid is required when passing data as first parameter');
+            }
+            return $this->client->post("projects/{$projectUuid}/payments", $project);
+        }
+        
+        // Новый формат: отдельные параметры
+        return $this->client->post("projects/{$project}/payments", $data);
     }
 
     public function getPlanFeatures(int|string $project, string $planUuid): array
